@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".BaseActivity">
+
+
+    <Button
+        android:id="@+id/json_string_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Parse Simple Json From String" />
+
+    <Button
+        android:id="@+id/jsonArray_string_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Parse Json Array From String" />
+
+    <Button
+        android:id="@+id/raw_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Parse Json file From Raw" />
+
+    <Button
+        android:id="@+id/assets_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Parse Json file From assets" />
+</LinearLayout>

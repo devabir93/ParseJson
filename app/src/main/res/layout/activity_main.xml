@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".string.ParseJsonFromStringActivity">
+
+    <TextView
+        android:id="@+id/name_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/name_lbl"
+        app:layout_constraintTop_toTopOf="@id/name_lbl"
+
+        />
+
+    <TextView
+        android:id="@+id/email_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: "
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/name_lbl"
+        app:layout_constraintTop_toBottomOf="@id/name_tv" />
+
+    <TextView
+        android:id="@+id/email_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/email_lbl"
+        app:layout_constraintTop_toTopOf="@id/email_lbl" />
+
+    <TextView
+        android:id="@+id/age_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age: "
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/name_lbl"
+        app:layout_constraintTop_toBottomOf="@id/email_lbl" />
+
+    <TextView
+        android:id="@+id/age_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/age_lbl"
+        app:layout_constraintTop_toTopOf="@id/age_lbl" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
