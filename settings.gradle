@@ -1,0 +1,2 @@
+rootProject.name = "Parse Simple json"
+include ':app'

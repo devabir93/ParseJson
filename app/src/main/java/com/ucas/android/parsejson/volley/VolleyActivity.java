@@ -39,6 +39,7 @@ public class VolleyActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         fetchJsonObject();
         //fetchStringObject();
+
     }
 
     private void fetchStringObject() {
