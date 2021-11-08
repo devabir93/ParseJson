@@ -6,6 +6,8 @@ public class User {
     String email;
     String gender;
     Contact contact;
+    private String job;
+    private String token;
 
     public User() {
     }
@@ -66,6 +68,24 @@ public class User {
                 ", email='" + email + '\'' +
                 ", gender='" + gender + '\'' +
                 ", contact=" + contact +
+                ", job='" + job + '\'' +
+                ", token='" + token + '\'' +
                 '}';
+    }
+
+    public void setJob(String job) {
+        this.job = job;
+    }
+
+    public String getJob() {
+        return job;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getToken() {
+        return token;
     }
 }

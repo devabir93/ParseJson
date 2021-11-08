@@ -1,4 +1,4 @@
-package com.ucas.android.parsejson.volley;
+package com.ucas.android.parsejson.file;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -25,7 +25,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VolleyActivity extends AppCompatActivity {
+public class VolleyGetActivity extends AppCompatActivity {
     private String url = "https://run.mocky.io/v3/c885d250-6078-4618-8155-ce66d5ff1e61";
     RecyclerView recyclerView;
     @Override
@@ -87,7 +87,7 @@ public class VolleyActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 //  call the constructor of CustomAdapter to send the reference and data to Adapter
-                CustomAdapter customAdapter = new CustomAdapter(VolleyActivity.this, userList);
+                CustomAdapter customAdapter = new CustomAdapter(VolleyGetActivity.this, userList);
                 recyclerView.setAdapter(customAdapter); // set the Adapter to RecyclerView
             }
         }, new Response.ErrorListener() {
