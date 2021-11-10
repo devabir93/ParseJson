@@ -9,13 +9,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ucas.android.parsejson.file.ParseJsonFileFromAssetsActivity;
 import com.ucas.android.parsejson.file.ReadJsonFileFromRawActivity;
+import com.ucas.android.parsejson.glide.LoadImageUsingGlideActivity;
 import com.ucas.android.parsejson.string.ParseJsonArrayFromStringActivity;
 import com.ucas.android.parsejson.string.ParseJsonFromStringActivity;
 import com.ucas.android.parsejson.volley.RegisterActivity;
 
 public class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button json_string_button, jsonArray_string_button, raw_button, assets_button, volley_button;
+    Button json_string_button, jsonArray_string_button, raw_button, assets_button, volley_button,glide_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +28,14 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         raw_button = findViewById(R.id.raw_button);
         assets_button = findViewById(R.id.assets_button);
         volley_button = findViewById(R.id.volley_button);
+        glide_button = findViewById(R.id.glide_button);
 
         json_string_button.setOnClickListener(this);
         jsonArray_string_button.setOnClickListener(this);
         raw_button.setOnClickListener(this);
         assets_button.setOnClickListener(this);
         volley_button.setOnClickListener(this);
+        glide_button.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +55,9 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.volley_button:
                 startActivity(new Intent(BaseActivity.this, RegisterActivity.class));
+                break;
+            case R.id.glide_button:
+                startActivity(new Intent(BaseActivity.this, LoadImageUsingGlideActivity.class));
                 break;
         }
     }

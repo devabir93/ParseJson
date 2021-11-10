@@ -12,14 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ParseSimpleJson">
+        <activity android:name=".glide.LoadImageUsingGlideActivity"></activity>
         <activity
             android:name=".volley.GetUsersActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
 
         </activity>
         <activity android:name=".file.ReadJsonFileFromRawActivity" />
@@ -28,14 +31,12 @@
         <activity android:name=".string.ParseJsonFromStringActivity" />
         <activity android:name=".volley.RegisterActivity" />
         <activity android:name=".file.VolleyGetActivity" />
-        <activity
-            android:name=".BaseActivity"
-            >
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+        <activity android:name=".BaseActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

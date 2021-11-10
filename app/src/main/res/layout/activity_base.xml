@@ -38,4 +38,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Parse Json file using volley" />
+    <Button
+        android:id="@+id/glide_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load image using glide" />
 </LinearLayout>
