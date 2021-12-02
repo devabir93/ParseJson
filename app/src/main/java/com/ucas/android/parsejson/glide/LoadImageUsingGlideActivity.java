@@ -29,7 +29,7 @@ public class LoadImageUsingGlideActivity extends AppCompatActivity {
                 .error(R.drawable.error)
                 .transition(DrawableTransitionOptions.withCrossFade())
                 //.apply(requestOptions)
-                .circleCrop()
+                .optionalCircleCrop()
                 .into(imageView);
     }
 }

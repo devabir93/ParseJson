@@ -6,26 +6,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ucas.android.parsejson.model.User;
+import com.ucas.android.parsejson.model.UserExam;
 
 import java.util.List;
 
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
+public class CustomAdapter2 extends RecyclerView.Adapter<CustomAdapter2.MyViewHolder> {
 
-    List<User> users;
+    List<UserExam> users;
     Context context;
 
-    public CustomAdapter(Context context, List<User> users) {
+    public CustomAdapter2(Context context, List<UserExam> users) {
         this.context = context;
         this.users = users;
     }
 
-    public CustomAdapter(Activity activity) {
+    public CustomAdapter2(Activity activity) {
         this.context = activity;
     }
 
@@ -40,18 +39,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         // set the data in items
-        User user = users.get(position);
+        UserExam user = users.get(position);
 
-        holder.name.setText(user.getName());
+        holder.name.setText(user.getFirstName()+" "+user.getLastName());
         holder.email.setText(user.getEmail());
-        // implement setOnClickListener event on item view.
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // display a toast with person name on item click
-                Toast.makeText(context, user.getName(), Toast.LENGTH_SHORT).show();
-            }
-        });
 
     }
 
@@ -61,7 +52,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         return users != null ? users.size() : 0;
     }
 
-    public void setData(List<User> userList) {
+    public void setData(List<UserExam> userList) {
         this.users = userList;
         notifyDataSetChanged();
     }

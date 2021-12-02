@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ParseSimpleJson">
-        <activity android:name=".glide.LoadImageUsingGlideActivity"></activity>
+        <activity android:name=".retrofit.RetrofitGetUserActivity"></activity>
+        <activity android:name=".glide.LoadImageUsingGlideActivity" />
         <activity
             android:name=".volley.GetUsersActivity"
             android:exported="true">
@@ -31,7 +32,9 @@
         <activity android:name=".string.ParseJsonFromStringActivity" />
         <activity android:name=".volley.RegisterActivity" />
         <activity android:name=".file.VolleyGetActivity" />
-        <activity android:name=".BaseActivity" android:exported="true">
+        <activity
+            android:name=".BaseActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
