@@ -4,6 +4,7 @@ public class User {
     int id;
     String name;
     String email;
+    String password;
     String gender;
     Contact contact;
     private String job;
@@ -12,12 +13,25 @@ public class User {
     public User() {
     }
 
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
     public User(int id, String name, String email, String gender, Contact contact) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.gender = gender;
         this.contact = contact;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getId() {

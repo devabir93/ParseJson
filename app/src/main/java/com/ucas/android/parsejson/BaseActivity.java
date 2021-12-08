@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.ucas.android.parsejson.file.ParseJsonFileFromAssetsActivity;
 import com.ucas.android.parsejson.file.ReadJsonFileFromRawActivity;
 import com.ucas.android.parsejson.glide.LoadImageUsingGlideActivity;
+import com.ucas.android.parsejson.retrofit.RegisterUsingRetofitActivity;
 import com.ucas.android.parsejson.retrofit.RetrofitGetUserActivity;
 import com.ucas.android.parsejson.string.ParseJsonArrayFromStringActivity;
 import com.ucas.android.parsejson.string.ParseJsonFromStringActivity;
@@ -17,7 +18,7 @@ import com.ucas.android.parsejson.volley.RegisterActivity;
 
 public class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button json_string_button, jsonArray_string_button, raw_button, assets_button, volley_button,glide_button,retrofit_button;
+    Button json_string_button, jsonArray_string_button, raw_button, assets_button, volley_button,glide_button,retrofit_button,retrofit_post_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         volley_button = findViewById(R.id.volley_button);
         glide_button = findViewById(R.id.glide_button);
         retrofit_button = findViewById(R.id.retrofit_button);
+        retrofit_post_button = findViewById(R.id.retrofit_post_button);
 
         json_string_button.setOnClickListener(this);
         jsonArray_string_button.setOnClickListener(this);
@@ -39,6 +41,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         volley_button.setOnClickListener(this);
         glide_button.setOnClickListener(this);
         retrofit_button.setOnClickListener(this);
+        retrofit_post_button.setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +67,9 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.retrofit_button:
                 startActivity(new Intent(BaseActivity.this, RetrofitGetUserActivity.class));
+                break;
+            case R.id.retrofit_post_button:
+                startActivity(new Intent(BaseActivity.this, RegisterUsingRetofitActivity.class));
                 break;
         }
     }

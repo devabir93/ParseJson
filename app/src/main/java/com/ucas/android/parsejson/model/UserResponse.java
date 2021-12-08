@@ -9,9 +9,9 @@ public class UserResponse {
     @SerializedName("data")
     @Expose
     List<UserExam> userList;
-
     public UserResponse() {
     }
+
 
     public UserResponse(List<UserExam> userList) {
         this.userList = userList;

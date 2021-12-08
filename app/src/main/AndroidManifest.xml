@@ -32,6 +32,7 @@
         <activity android:name=".string.ParseJsonFromStringActivity" />
         <activity android:name=".volley.RegisterActivity" />
         <activity android:name=".file.VolleyGetActivity" />
+        <activity android:name=".retrofit.RegisterUsingRetofitActivity"/>
         <activity
             android:name=".BaseActivity"
             android:exported="true">

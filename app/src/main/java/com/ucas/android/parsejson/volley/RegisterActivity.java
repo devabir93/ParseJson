@@ -17,9 +17,16 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.ucas.android.parsejson.R;
+import com.ucas.android.parsejson.model.RegisterRequestBody;
+import com.ucas.android.parsejson.model.User;
+import com.ucas.android.parsejson.model.UserResponse;
+import com.ucas.android.parsejson.retrofit.Service;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class RegisterActivity extends AppCompatActivity {
     private String base_url = "https://reqres.in/api/";
