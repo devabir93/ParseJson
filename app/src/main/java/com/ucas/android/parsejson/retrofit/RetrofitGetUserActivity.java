@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ucas.android.parsejson.CustomAdapter;
 import com.ucas.android.parsejson.CustomAdapter2;
 import com.ucas.android.parsejson.R;
+import com.ucas.android.parsejson.model.Product;
 import com.ucas.android.parsejson.model.User;
 import com.ucas.android.parsejson.model.UserResponse;
 
@@ -51,6 +52,39 @@ public class RetrofitGetUserActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<UserResponse> call, Throwable t) {
+                t.printStackTrace();
+
+            }
+        });
+    }
+
+    private void getProducts(){
+        service.getProducts().enqueue(new Callback<List<Product>>() {
+            @Override
+            public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
+//                if (response.body() != null)
+//                    customAdapter.setData(response.body());
+
+            }
+
+            @Override
+            public void onFailure(Call<List<Product>> call, Throwable t) {
+                t.printStackTrace();
+
+            }
+        });
+    }
+
+    private void getProductDetails(int id){
+        service.getProductDetails(id).enqueue(new Callback<Product>() {
+            @Override
+            public void onResponse(Call<Product> call, Response<Product> response) {
+                Product product= response.body();
+                //fillProductDetails(product);
+            }
+
+            @Override
+            public void onFailure(Call<Product> call, Throwable t) {
                 t.printStackTrace();
 
             }
